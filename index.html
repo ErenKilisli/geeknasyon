@@ -90,6 +90,8 @@
     figure { margin: 0; position: relative; }
     figure img {
       width: 100%;
+      aspect-ratio: 16 / 9; /* sabit oran — responsive */
+      object-fit: cover;   /* kesme yerine crop */
       border-radius: 12px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     }
@@ -97,6 +99,7 @@
       position: absolute;
       bottom: 8px;
       left: 12px;
+      right: 12px;
       color: #fff;
       font-weight: 600;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
@@ -122,7 +125,8 @@
       header p { font-size: 0.95rem; }
       .social { gap: 0.65rem; }
       .social a { font-size: 0.85rem; padding: 0.5rem 0.9rem; }
-      figure figcaption { font-size: 0.85rem; }
+      figure figcaption { font-size: 0.8rem; }
+      main { grid-template-columns: 1fr; } /* telefonlarda tek sütun */
     }
   </style>
 </head>
@@ -178,12 +182,12 @@
   <!-- ---------- Görseller ---------- -->
   <main>
     <figure>
-      <img src="src/images/posters/f11.jpg" alt="Formula 1 görseli" />
+      <img src="src/images/posters/f11.jpg" alt="Formula 1 görseli" loading="lazy" />
       <figcaption>F1 Filmi Analizi Çok Yakında Yayında</figcaption>
     </figure>
 
     <figure>
-      <img src="src/images/posters/superman4k.jpg" alt="Superman filmi görseli" />
+      <img src="src/images/posters/superman4k.jpg" alt="Superman filmi görseli" loading="lazy" />
       <figcaption>Superman Galası ve İncelemesi Yakında</figcaption>
     </figure>
   </main>
