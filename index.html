@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geeknasyon</title>
+  <!-- Favicon ve Logo -->
+  <link rel="icon" href="src/images/logo/favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gn-green: #00eb85;  /* Kurumsal yeşil */
+      --gn-blue: #1b1c32;  /* Lacivert metin rengi */
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0 1rem;
+      font-family: 'Inter', sans-serif;
+      background: #fff;
+      color: var(--gn-blue);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    /* ---------- Header ---------- */
+    header {
+      margin-top: 2rem;
+    }
+    header img {
+      width: 120px;
+      height: auto;
+    }
+    header p {
+      margin: 1rem auto 0;
+      max-width: 600px;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+
+    /* ---------- Sosyal Linkler ---------- */
+    .social {
+      margin: 2rem 0 3rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .social a {
+      background: var(--gn-green);
+      color: #fff;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+    .social a:hover { opacity: 0.85; }
+
+    /* ---------- Ana Bölüm ---------- */
+    main {
+      flex: 1;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      width: 100%;
+      max-width: 1000px;
+    }
+    figure {
+      margin: 0;
+      position: relative;
+    }
+    figure img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+    figure figcaption {
+      position: absolute;
+      bottom: 8px;
+      left: 12px;
+      color: #fff;
+      font-weight: 600;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      font-size: 0.9rem;
+      padding: 1rem 0;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ---------- Tanıtım & Logo ---------- -->
+  <header>
+    <img src="src/images/logo.svg" alt="Geeknasyon Logo" />
+    <p>Geeknasyon; yazılım, oyun, Formula 1 ve sinema tutkunlarını aynı çatı altında buluşturan bağımsız bir dijital topluluktur.</p>
+  </header>
+
+  <!-- ---------- Sosyal Medya Linkleri ---------- -->
+  <div class="social">
+    <a href="https://www.youtube.com/@geeknasyon" target="_blank" rel="noopener">YouTube</a>
+    <a href="https://www.instagram.com/geeknasyon" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://twitter.com/geeknasyon" target="_blank" rel="noopener">Twitter / X</a>
+    <a href="mailto:info@geeknasyon.com">E‑posta</a>
+  </div>
+
+  <!-- ---------- Görseller ---------- -->
+  <main>
+    <figure>
+      <img src="src/images/f1.jpg" alt="Formula 1 görseli" />
+      <figcaption>Formula 1 Analizleri</figcaption>
+    </figure>
+
+    <figure>
+      <img src="src/images/superman.jpg" alt="Superman filmi görseli" />
+      <figcaption>"Superman" Film İncelemesi</figcaption>
+    </figure>
+  </main>
+
+  <footer>© 2025 Geeknasyon – Tüm hakları saklıdır.</footer>
+
+</body>
+</html>
