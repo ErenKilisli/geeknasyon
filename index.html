@@ -30,11 +30,12 @@
       text-align: center;
     }
 
+    img, svg { max-width: 100%; height: auto; }
+
     /* ---------- Header ---------- */
     header { margin-top: 1.5rem; }
     header img {
-      width: 420px;
-      height: auto;
+      width: clamp(200px, 60vw, 420px); /* Ekrana göre esnek logo */
       display: block;
       margin: 0 auto 0.75rem; /* Tam ortalanmış logo */
     }
@@ -106,6 +107,22 @@
       font-size: 0.9rem;
       padding: 1rem 0;
       color: #888;
+    }
+
+    /* ---------- RESPONSIVE BREAKPOINTS ---------- */
+    @media (max-width: 768px) {
+      header p { font-size: 1rem; line-height: 1.45; }
+      .social a { padding: 0.55rem 1rem; }
+      main { gap: 1.5rem; }
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 0 0.75rem; }
+      header { margin-top: 1rem; }
+      header p { font-size: 0.95rem; }
+      .social { gap: 0.65rem; }
+      .social a { font-size: 0.85rem; padding: 0.5rem 0.9rem; }
+      figure figcaption { font-size: 0.85rem; }
     }
   </style>
 </head>
