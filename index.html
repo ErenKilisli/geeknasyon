@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Geeknasyon</title>
-  <!-- Favicon ve Logo -->
+  <!-- Favicon -->
   <link rel="icon" href="src/images/logo/favicon.ico" />
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --gn-green: #00eb85;  /* Kurumsal yeşil */
-      --gn-blue: #1b1c32;  /* Lacivert metin rengi */
+      --gn-blue: #ffffff;  /* Açık metin rengi */
     }
 
     * { box-sizing: border-box; }
@@ -18,7 +19,7 @@
       margin: 0;
       padding: 0 1rem;
       font-family: 'Inter', sans-serif;
-      background: #fff;
+      background: #1b1c32; /* Lacivert arka plan */
       color: var(--gn-blue);
       display: flex;
       flex-direction: column;
@@ -28,15 +29,15 @@
     }
 
     /* ---------- Header ---------- */
-    header {
-      margin-top: 2rem;
-    }
+    header { margin-top: 1.5rem; }
     header img {
-      width: 120px;
+      width: 320px;
       height: auto;
+      display: block;
+      margin: 0 auto 0.75rem; /* Logodan sonra boşluk */
     }
     header p {
-      margin: 1rem auto 0;
+      margin: 0 auto;
       max-width: 600px;
       font-size: 1.1rem;
       line-height: 1.4;
@@ -53,13 +54,18 @@
     .social a {
       background: var(--gn-green);
       color: #fff;
-      padding: 0.6rem 1rem;
+      padding: 0.6rem 1.2rem;
       border-radius: 8px;
       font-weight: 600;
       text-decoration: none;
-      transition: opacity 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      /* Logodaki gibi siyah gölge */
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
     }
-    .social a:hover { opacity: 0.85; }
+    .social a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+    }
 
     /* ---------- Ana Bölüm ---------- */
     main {
@@ -70,14 +76,11 @@
       width: 100%;
       max-width: 1000px;
     }
-    figure {
-      margin: 0;
-      position: relative;
-    }
+    figure { margin: 0; position: relative; }
     figure img {
       width: 100%;
       border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
     }
     figure figcaption {
       position: absolute;
@@ -92,7 +95,7 @@
     footer {
       font-size: 0.9rem;
       padding: 1rem 0;
-      color: #666;
+      color: #888;
     }
   </style>
 </head>
@@ -100,7 +103,7 @@
 
   <!-- ---------- Tanıtım & Logo ---------- -->
   <header>
-    <img src="src/images/logo.svg" alt="Geeknasyon Logo" />
+    <img src="src/images/logo_g.png" alt="Geeknasyon Logo" />
     <p>Geeknasyon; yazılım, oyun, Formula 1 ve sinema tutkunlarını aynı çatı altında buluşturan bağımsız bir dijital topluluktur.</p>
   </header>
 
